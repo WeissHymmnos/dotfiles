@@ -1,0 +1,3 @@
+[preview]
+command = "nvim"
+args = ["--headless", "-c", "set runtimepath+=~/.vim", "-c", "source ~/.vimrc", "-c", "edit %"]
