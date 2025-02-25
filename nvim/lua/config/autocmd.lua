@@ -35,17 +35,8 @@ vim.api.nvim_create_autocmd('VimLeavePre', {
     resession.save 'last'
   end,
 })
--- vim.api.nvim_create_autocmd({ 'BufNew', 'BufNewFile', 'BufRead' }, {
---   callback = function()
---     if #vim.fn.getbufinfo { buflisted = 1 } >= 2 then
---       vim.o.showtabline = 2 -- 总是显示
---     elseif vim.o.showtabline ~= 1 then -- 不重置已经为默认值的选项
---       vim.o.showtabline = 1 -- 仅当标签页多于 1 时显示
---     end
---   end,
--- })
 
--- INFO: 主题变化时候重新加载自定义高亮
+--highlights
 if not vim.g.transparent() then
   vim.api.nvim_create_autocmd('ColorScheme', {
     pattern = '*',
