@@ -82,3 +82,12 @@ opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 5
+
+
+-- 禁用行号和相对行号（只在终端模式下）
+vim.cmd [[
+  augroup TerminalSettings
+    autocmd!
+    autocmd TermOpen * setlocal nonumber norelativenumber
+  augroup END
+]]

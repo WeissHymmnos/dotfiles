@@ -1,5 +1,5 @@
 local keymap = vim.keymap
-require('snacks')
+
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
@@ -67,16 +67,12 @@ keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' 
 -- neotree
 keymap.set('n', '<leader>e', ':Neotree toggle left filesystem<CR>', { noremap = true, silent = true })	-- 快捷键映射：<leader>e 打开左侧文件系统
 
--- 打开终端并进入终端模式
-keymap.set('n', '<Leader>tv', function()
-  Snacks.terminal.open()
-end, { noremap = true, silent = true })
+-- 映射空格 + TH 启动第一个终端并进入终端模式
+vim.api.nvim_set_keymap('n', '<Space>th', ':split | term<CR>:startinsert<CR>', { noremap = true, silent = true })
 
-keymap.set('n', '<Leader>th', function()
-  Snacks.terminal.open()
-end, { noremap = true, silent = true })
+-- 映射空格 + TV 启动第二个终端并进入终端模式
+vim.api.nvim_set_keymap('n', '<Space>tv', ':vsplit | term<CR>:startinsert<CR>', { noremap = true, silent = true })-- 关闭终端并退出终端模式
 
--- 关闭终端并退出终端模式
 keymap.set('t', '<C-q>', function()
   local terminal, _ = Snacks.terminal.get()
   if terminal then
