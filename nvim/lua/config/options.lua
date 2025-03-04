@@ -91,3 +91,19 @@ vim.cmd [[
     autocmd TermOpen * setlocal nonumber norelativenumber
   augroup END
 ]]
+
+
+-- 进入终端模式时禁用光标行，离开终端时恢复
+vim.api.nvim_create_autocmd({"TermOpen", "BufEnter"}, {
+  pattern = "term://*",
+  callback = function()
+    vim.wo.cursorline = false
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufLeave", {
+  pattern = "term://*",
+  callback = function()
+    vim.wo.cursorline = true
+  end,
+})
