@@ -14,12 +14,11 @@ local function cpu_bar()
 end
 
 local function memory_bar()
-local handle = io.popen("memory_pressure -Q | tail -n 1")
+local handle = io.popen("free | awk '/Mem:/ {print 100 - ($7/$2 * 100)}'")
   local result = handle:read("*a")
   handle:close()
-  local percentage_str = result:match("(%d+%%)")
-  local ram = tonumber(percentage_str:match("%d+")) or 100
-  return usage_bar(100 - ram) .. "RAM"
+  local ram = tonumber(result) or 100
+  return usage_bar( ram) .. "RAM"
 end
 
 
