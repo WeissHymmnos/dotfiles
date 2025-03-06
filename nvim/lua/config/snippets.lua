@@ -12,7 +12,7 @@ ls.add_snippets("all", {
   }),
 
   s("sig", {
-    t("Yours sincerely,\n"), i(1, "Your Name")
+    t("Yours sincerely,WeissHymmnos\n"), i(1, "Your Name")
   }),
 
   -- 自动触发的 if 语句
@@ -47,5 +47,46 @@ ls.add_snippets("tex", {
 
   s("dm", {
     t("\\[\n  "), i(1, "math"), t("\n\\]")
+  }),
+
+  s({
+    trig = "([%d%a%+%-%*/%^%(%)]+)/",  -- 匹配 3/、(1+2+3)/ 等
+    regTrig = true,
+    wordTrig = false,
+  }, {
+    f(function(args)
+      local expr = args[1][1] 
+      return "\\frac{" .. expr .. "}{"
+    end, { 1 }),
+    i(1), -- 分母插入点
+    t("}"),
+  }),
+
+  -- (1+(2+3)/) -> (1+\frac{2+3}{})
+  s({
+    trig = "%(([^%(%)]*)/%)",  
+    regTrig = true,
+    wordTrig = false,
+  }, {
+    f(function(args)
+      local expr = args[1][1]
+      return "(" .. "\\frac{" .. expr .. "}{"
+    end, { 1 }),
+    i(1),
+    t("})"),
+  }),
+
+  -- (1 + (2+3))/ -> \frac{1 + (2+3)}{}
+  s({
+    trig = "%(([^%(%)]*)%)%/",  -- 匹配 (expr)/
+    regTrig = true,
+    wordTrig = false,
+  }, {
+    f(function(args)
+      local expr = args[1][1]
+      return "\\frac{" .. expr .. "}{"
+    end, { 1 }),
+    i(1),
+    t("}"),
   }),
 })
