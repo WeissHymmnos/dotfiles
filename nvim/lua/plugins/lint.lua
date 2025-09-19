@@ -1,27 +1,17 @@
 return {
-    "mfussenegger/nvim-lint",
-    config = function()
-        local lint = require("lint")
-        
-        -- 配置Linter
-        lint.linters_by_ft = {
-            python = { "flake8" },
-            lua = { "luacheck" },
-            json = { "jsonlint" },
-            sh = { "shellcheck" },
-            markdown = { "markdownlint" },
-	    cpp = { "cppcheck" },
-	    tex = { "chktex" },
-        }
-
-        -- 触发
-        vim.api.nvim_create_autocmd( "BufWritePost", {
-            callback = function()
-                local ft = vim.bo.filetype
-                if lint.linters_by_ft[ft] then
-                    lint.try_lint()
-		end
-            end,
-        })
-    end,
+  "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  config = function()
+    local null_ls = require("none-ls")
+    null_ls.setup({
+      sources = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.shellcheck,
+      },
+    })
+  end,
 }

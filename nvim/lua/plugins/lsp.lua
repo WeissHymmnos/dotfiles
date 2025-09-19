@@ -4,7 +4,6 @@ return {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "mfussenegger/nvim-lint",     -- 语法检查
-        "jose-elias-alvarez/null-ls.nvim", -- 格式化与诊断
     },
     config = function()
         -- Mason
@@ -38,15 +37,5 @@ return {
             end,
         })
 
-        -- null-ls 配置
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                null_ls.builtins.formatting.stylua,  -- Lua 
-                null_ls.builtins.formatting.black,   -- Python 
-                null_ls.builtins.diagnostics.flake8, -- Python 
-                null_ls.builtins.diagnostics.shellcheck, -- Shell 
-            },
-        })
     end,
 }
