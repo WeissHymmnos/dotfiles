@@ -1,21 +1,21 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # BEGIN_KITTY_THEME
-# Base2Tone Motel Dark
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
 
 # BEGIN_KITTY_FONTS
-# 默认稍小，匹配高 DPI
-font_size 15
-# 备选：0xProtoNerdFontMono 或 Monospace
-font_family 0xProtoNerdFontMono
+# HyDE 默认稍小，匹配高 DPI
+font_size 14
+# HyDE 推荐；备选：0xProtoNerdFontMono 或 Monospace
+font_family JetBrainsMono
 bold_font auto
 italic_font auto
 bold_italic_font auto
 # END_KITTY_FONTS
 
-#### GENERAL (优化)
+#### GENERAL (HyDE/Hyprland 优化)
 allow_remote_control yes
 copy_on_select yes
 click_interval -1.0
@@ -27,20 +27,20 @@ sync_to_monitor yes  # Wayland 同步
 disable_ligatures cursor
 box_drawing_scale 0.1, 0.2, 1.0, 2.0
 
-#### WINDOW 
-hide_window_decorations  titlebar-only # 无边框支持
-# 紧凑填充
+#### WINDOW (HyDE 风格：模糊 + 填充)
+hide_window_decorations titlebar-only  # Hyprland 无边框支持
+# HyDE 紧凑填充
 window_padding_width 12
 dynamic_background_opacity yes
 # 稍高透明，匹配 HyDE 模糊
-background_opacity 0.91
+background_opacity 0.85
 # 降低以节省 Fedora GNOME 性能
-background_blur 30
+background_blur 20
 remember_window_size yes
 
 #### CURSOR (简洁，无闪烁)
-cursor_blink_interval 0.6
-detect_urls yes  # 启用 URL 高亮
+cursor_blink_interval 0
+detect_urls yes  # HyDE 启用 URL 高亮
 mouse_hide_wait 0.2  # 更快隐藏
 
 #### TAB (HyDE powerline，简约)
@@ -57,4 +57,10 @@ map ctrl+shift+t new_tab_with_cwd
 map ctrl+shift+space launch --type=tab kitten themes=tab kitten themes
 
 shell /bin/zsh
-
+tab_bar_style separator
+tab_bar_background 
+tab_separator ""
+tab_bar_margin_width 0.0
+active_tab_background 
+active_tab_foreground
+inactive_tab_foreground

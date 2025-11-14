@@ -5,23 +5,6 @@ local function usage_bar(percentage)
   return chars[index]
 end
 
-local function cpu_bar()
-  local handle = io.popen("ps -A -o %cpu | awk '{s+=$1} END {print s}'")
-  local result = handle:read("*a")
-  handle:close()
-  local cpu = tonumber(result) or 0
-  return usage_bar(cpu/8) .. "CPU"
-end
-
-local function memory_bar()
-local handle = io.popen("memory_pressure -Q | tail -n 1")
-  local result = handle:read("*a")
-  handle:close()
-  local percentage_str = result:match("(%d+%%)")
-  local ram = tonumber(percentage_str:match("%d+")) or 100
-  return usage_bar(100 - ram) .. "RAM"
-end
-
 
 return {
     "nvim-lualine/lualine.nvim",
@@ -47,8 +30,6 @@ return {
         	lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = { {'filename', path = 4} },
                 lualine_x = {
-	      { cpu_bar, color = { fg = "#fabd2f", gui = "bold" } },
-	      { memory_bar, color = { fg = "#83a598", gui = "bold" } },
 	    },
                 lualine_y = { 'progress' },
                 lualine_z = {  
