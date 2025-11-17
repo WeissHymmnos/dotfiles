@@ -108,4 +108,21 @@ source $ZSH/oh-my-zsh.sh
 # 加载语法高亮（必须在最后）
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PATH="$HOME/miniconda/bin:$PATH"
+# export PATH="$HOME/miniconda/bin:$PATH"  # commented out by conda initialize
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/wh/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/wh/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/wh/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/wh/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export LLM_KEY="sk-rublDF9Ea2tWLlSk4rjfvniS6Z9zJfqUqkbBnp10GW0PLCid"

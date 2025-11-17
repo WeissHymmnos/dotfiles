@@ -40,7 +40,7 @@ return {
         dashboard.section.footer.opts.hl = "Comment"
         dashboard.section.footer.val = "🐾 Welcome to Happy Hacking CatVim  !"
 
-        -- 🚀 组合所有部分（已移除项目文件夹）
+        --  组合所有部分
         dashboard.config.layout = {
             { type = "padding", val = 3 },
             dashboard.section.header,
