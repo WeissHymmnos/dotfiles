@@ -1,1 +1,1 @@
-# Performace dashboard is tailer to MacOS with 8 core chips
+# This is the fedora linux version of my nvim configuration.
