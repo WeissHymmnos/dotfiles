@@ -13,7 +13,7 @@ return {
 
     require("llm").setup({
       url = "https://api.moonshot.cn/v1/chat/completions",
-      model = "kimi-k2-0905-preview",
+      model = "kimi-k2-thinking-turbo",
       api_type = "openai",
       max_tokens = 8192,
       fetch_key = function() return vim.env.LLM_KEY end,
@@ -99,7 +99,7 @@ return {
           opts = {
             fetch_key = function() return vim.env.LLM_KEY end,
             url = "https://api.moonshot.cn/v1/chat/completions",
-            model = "kimi-k2-0905-preview",
+            model = "kimi-k2-thinking-turbo",
             api_type = "openai",
             language = "Chinese",
           },
@@ -110,7 +110,7 @@ return {
           opts = {
             fetch_key = function() return vim.env.LLM_KEY end,
             url = "https://api.moonshot.cn/v1/chat/completions",
-            model = "kimi-k2-0905-preview",
+            model = "kimi-k2-thinking-turbo",
             api_type = "openai",
             only_display_diff = true,
           },
@@ -121,7 +121,7 @@ return {
           opts = {
             fetch_key = function() return vim.env.LLM_KEY end,
             url = "https://api.moonshot.cn/v1/chat/completions",
-            model = "kimi-k2-0905-preview",
+            model = "kimi-k2-thinking-turbo",
             api_type = "openai",
             component_width = "60%",
             component_height = "50%",
@@ -135,7 +135,7 @@ return {
           opts = {
             fetch_key = function() return vim.env.LLM_KEY end,
             url = "https://api.moonshot.cn/v1/chat/completions",
-            model = "kimi-k2-0905-preview",
+            model = "kimi-k2-thinking-turbo",
             api_type = "openai",
             enter_flexible_window = true,
             component_width = "70%",
@@ -163,7 +163,7 @@ Return ONLY the commit message - no introduction, no explanation, no quotes arou
           opts = {
             fetch_key = function() return vim.env.LLM_KEY end,
             url = "https://api.moonshot.cn/v1/chat/completions",
-            model = "kimi-k2-0905-preview",
+            model = "kimi-k2-thinking-turbo",
             api_type = "openai",
             enter_flexible_window = true,
             component_width = "80%",
@@ -188,7 +188,7 @@ Return ONLY the commit message - no introduction, no explanation, no quotes arou
             inline_assistant = true,
             language = "Chinese",
             url = "https://api.moonshot.cn/v1/chat/completions",
-            model = "kimi-k2-0905-preview",
+            model = "kimi-k2-thinking-turbo",
             api_type = "openai",
             fetch_key = function() return vim.env.LLM_KEY end,
           },
