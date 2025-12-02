@@ -11,4 +11,4 @@ vim.cmd [[
   highlight NormalFloat guibg=#282828
   highlight FloatBorder guibg=#282828 guifg=#a89984]]
 
-vim.env.LLM_KEY = "sk-rublDF9Ea2tWLlSk4rjfvniS6Z9zJfqUqkbBnp10GW0PLCid"
+vim.env.LLM_KEY = os.getenv("LLM_KEY")
