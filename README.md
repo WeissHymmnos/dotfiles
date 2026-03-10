@@ -1,5 +1,7 @@
 # 个人终端与编辑器配置指南 (Dotfiles)
 
+![Main Menu](IMG-001.png "Main Menu")
+
 本仓库包含了用于构建高效、美观且集成了强大 AI 辅助功能的现代化终端开发环境的配置文件。核心配置围绕 Neovim (命名为 CatVim)、Kitty 终端模拟器、Zsh 提示符 (Powerlevel10k) 以及 Yazi 终端文件管理器展开。
 
 ## 核心特点
