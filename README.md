@@ -1,6 +1,9 @@
 # 个人终端与编辑器配置指南 (Dotfiles)
 
 ![Main Menu](IMG-001.png "Main Menu")
+![FZF](IMG-002.png "FZF")
+![Interface](IMG-004.png "If")
+![LLM](IMG-006.jpg "LLM")
 
 本仓库包含了用于构建高效、美观且集成了强大 AI 辅助功能的现代化终端开发环境的配置文件。核心配置围绕 Neovim (命名为 CatVim)、Kitty 终端模拟器、Zsh 提示符 (Powerlevel10k) 以及 Yazi 终端文件管理器展开。
 
@@ -73,6 +76,8 @@
 * 瞬态提示符 (Transient Prompt)：开启瞬态提示符功能，执行完命令后自动精简历史提示符，保持终端界面整洁。
 
 ### 4. Yazi 文件管理器
+
+![Yazi](IMG-005.png "Yazi")
 
 配置文件：位于 `yazi/` 目录
 
