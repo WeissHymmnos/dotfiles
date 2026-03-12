@@ -1,1 +1,1 @@
-# This is the fedora linux version of my nvim configuration.
+# This is the Arch linux version of my nvim configuration.
