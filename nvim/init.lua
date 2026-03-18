@@ -1,3 +1,20 @@
+-- Ensure LSP tools can be found in the PATH, especially when started from external scripts
+local extra_paths = {
+    "/opt/homebrew/bin",
+    "/usr/local/bin",
+    "/usr/bin",
+    "/bin",
+    "/usr/sbin",
+    "/sbin",
+    vim.fn.expand("$HOME") .. "/.local/share/nvim/mason/bin", -- Mason tools path
+}
+
+for _, path in ipairs(extra_paths) do
+    if vim.fn.isdirectory(path) == 1 then
+        vim.env.PATH = path .. ":" .. vim.env.PATH
+    end
+end
+
 require("config.lazy")
 require("config.options")
 require("config.keymaps")
