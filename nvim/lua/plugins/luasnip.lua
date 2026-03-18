@@ -11,10 +11,6 @@ return {
       enable_autosnippets = true,  -- 允许自动触发 snippets
     })
 
-    -- 绑定 Tab 键来展开 snippet
-    vim.api.nvim_set_keymap("i", "<Tab>", "<cmd>lua require'luasnip'.jump(1)<CR>", {silent = true})
-    vim.api.nvim_set_keymap("s", "<Tab>", "<cmd>lua require'luasnip'.jump(1)<CR>", {silent = true})
-    vim.api.nvim_set_keymap("i", "<S-Tab>", "<cmd>lua require'luasnip'.jump(-1)<CR>", {silent = true})
-    vim.api.nvim_set_keymap("s", "<S-Tab>", "<cmd>lua require'luasnip'.jump(-1)<CR>", {silent = true})
+    -- 移除冲突的全局 Tab 映射，逻辑将整合到 nvim-cmp 中
   end
 }

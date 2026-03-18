@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.options")
 require("config.keymaps")
+require("config.snippets")
 
 vim.o.showtabline = 2  -- 始终显示 tabline
 
