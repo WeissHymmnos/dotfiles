@@ -1,0 +1,24 @@
+[http]
+	postBuffer = 524288000
+	proxy = http://127.0.0.1:1082
+[url "https://"]
+	insteadOf = git://
+[url "https://github.com/"]
+	insteadOf = ssh://git@github.com/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = weisshymmnos
+	email = weisshymmnos@icloud.com
+[core]
+	editor = nvim -c 'autocmd VimLeave * silent! wq'
+	atuocrlf = input
+[merge]
+  tool = opendiff
+[difftool "xcode"]
+    cmd = "opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\""
+[https]
+	proxy = http://127.0.0.1:1082

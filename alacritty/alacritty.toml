@@ -1,0 +1,41 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "Full"
+
+opacity = 1  
+blur = false
+  
+option_as_alt = "Both"
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
+
+size = 18
+
+[keyboard]
+bindings = [
+    # Command + Enter 切换全屏
+    { key = "Enter", mods = "Command", action = "ToggleFullscreen" },
+   
+    # Option + N 打开新标签页
+    { key = "N", mods = "Option", action = "CreateNewTab" },
+    
+    # Option + J 切换到下一个标签页
+    { key = "J", mods = "Option", action = "SelectNextTab" },
+    
+    # Option + K 切换到上一个标签页
+    { key = "K", mods = "Option", action = "SelectPreviousTab" }
+  ]
+
+
+

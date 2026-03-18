@@ -1,0 +1,11 @@
+font:
+  normal:
+    family: "0xProto Nerd Font"
+    style: Regular
+  bold:
+    family: "0xProto Nerd Font"
+    style: Bold
+  italic:
+    family: "0xProto Nerd Font"
+    style: Italic
+  size: 14

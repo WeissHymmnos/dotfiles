@@ -1,0 +1,64 @@
+# BundleID                            扩展名    角色
+# --------------------------------------------------
+# 编程语言 (Web & Scripting)
+com.apple.automator.NeoVimLauncher    .js      editor
+com.apple.automator.NeoVimLauncher    .ts      editor
+com.apple.automator.NeoVimLauncher    .jsx     editor
+com.apple.automator.NeoVimLauncher    .tsx     editor
+#com.apple.automator.NeoVimLauncher    .html    editor
+com.apple.automator.NeoVimLauncher    .css     editor
+com.apple.automator.NeoVimLauncher    .scss    editor
+com.apple.automator.NeoVimLauncher    .less    editor
+com.apple.automator.NeoVimLauncher    .php     editor
+com.apple.automator.NeoVimLauncher    .py      editor
+com.apple.automator.NeoVimLauncher    .rb      editor
+com.apple.automator.NeoVimLauncher    .lua     editor
+com.apple.automator.NeoVimLauncher    .pl      editor
+
+# 系统编程 & 编译语言
+com.apple.automator.NeoVimLauncher    .c       editor
+com.apple.automator.NeoVimLauncher    .cpp     editor
+com.apple.automator.NeoVimLauncher    .h       editor
+com.apple.automator.NeoVimLauncher    .hpp     editor
+com.apple.automator.NeoVimLauncher    .cc      editor
+com.apple.automator.NeoVimLauncher    .go      editor
+com.apple.automator.NeoVimLauncher    .rs      editor
+com.apple.automator.NeoVimLauncher    .swift   editor
+com.apple.automator.NeoVimLauncher    .java    editor
+com.apple.automator.NeoVimLauncher    .kt      editor
+com.apple.automator.NeoVimLauncher    .dart    editor
+com.apple.automator.NeoVimLauncher    .zig     editor
+
+# 配置文件 & 序列化
+com.apple.automator.NeoVimLauncher    .json    editor
+com.apple.automator.NeoVimLauncher    .yaml    editor
+com.apple.automator.NeoVimLauncher    .yml     editor
+com.apple.automator.NeoVimLauncher    .toml    editor
+com.apple.automator.NeoVimLauncher    .xml     editor
+com.apple.automator.NeoVimLauncher    .ini     editor
+com.apple.automator.NeoVimLauncher    .conf    editor
+com.apple.automator.NeoVimLauncher    .env     editor
+com.apple.automator.NeoVimLauncher    .editorconfig editor
+
+# 文本 & 文档
+com.apple.automator.NeoVimLauncher    .md      editor
+com.apple.automator.NeoVimLauncher    .markdown editor
+com.apple.automator.NeoVimLauncher    .txt     editor
+com.apple.automator.NeoVimLauncher    .tex     editor
+com.apple.automator.NeoVimLauncher    .bib     editor
+com.apple.automator.NeoVimLauncher    .log     editor
+com.apple.automator.NeoVimLauncher    .rst     editor
+
+# Shell & 脚本
+com.apple.automator.NeoVimLauncher    .sh      editor
+com.apple.automator.NeoVimLauncher    .zsh     editor
+com.apple.automator.NeoVimLauncher    .bash    editor
+com.apple.automator.NeoVimLauncher    .fish    editor
+com.apple.automator.NeoVimLauncher    .make    editor
+com.apple.automator.NeoVimLauncher    .dockerfile editor
+
+# 其他开发相关
+com.apple.automator.NeoVimLauncher    .sql     editor
+com.apple.automator.NeoVimLauncher    .graphql editor
+com.apple.automator.NeoVimLauncher    .vim     editor
+com.apple.automator.NeoVimLauncher    .vimrc   editor
