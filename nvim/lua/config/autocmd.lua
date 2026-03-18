@@ -1,3 +1,13 @@
+-- markdown and llm file settings
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "llm" },
+  callback = function()
+    vim.opt_local.conceallevel = 2
+    vim.opt_local.wrap = true
+  end,
+})
+
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
