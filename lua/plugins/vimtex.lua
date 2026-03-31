@@ -11,6 +11,7 @@ return {
         '-interaction=nonstopmode',
         '-synctex=1','-file-line-error',},
     }
-    vim.g.vimtex_fold_enabled = 1vim.g.vimtex_quickfix_mode = 0
+    vim.g.vimtex_fold_enabled = 1
+    vim.g.vimtex_quickfix_mode = 0
   end,
 }
