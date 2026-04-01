@@ -1,9 +1,6 @@
 local keymap = vim.keymap
 
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
-
 ----------INSERT----------
 
 ----------VISUAL----------
@@ -86,5 +83,8 @@ end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>sf", "<cmd>SearchBoxMatchAll<CR>", { desc = "Search in buffer" }) -- 全局搜索
 vim.keymap.set("n", "<leader>sr", "<cmd>SearchBoxReplace<CR>", { desc = "Search and replace" }) -- 替换
 vim.keymap.set("n", "<leader>sl", "<cmd>SearchBoxIncSearch<CR>", { desc = "Live search" }) -- 类似 / 搜索
+
+-- markdown preview
+keymap.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown Preview Toggle" })
 
 

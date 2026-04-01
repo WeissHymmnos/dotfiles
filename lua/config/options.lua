@@ -2,8 +2,6 @@ local opt = vim.opt
 
 
 vim.loader.enable()
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 vim.g.markdown_folding = 1
 
@@ -82,6 +80,13 @@ opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 5
+
+-- 缩进设置
+opt.shiftwidth = 2
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.expandtab = true
+opt.smartindent = true
 
 
 -- 禁用行号和相对行号（只在终端模式下）

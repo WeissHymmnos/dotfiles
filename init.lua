@@ -1,3 +1,6 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.env.LLM_KEY = os.getenv("LLM_KEY")
 
 require("config.lazy")
