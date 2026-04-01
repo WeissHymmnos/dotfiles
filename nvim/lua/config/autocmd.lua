@@ -1,6 +1,6 @@
--- markdown and llm file settings
+-- markdown, llm and latex file settings
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown", "llm" },
+  pattern = { "markdown", "llm", "tex" },
   callback = function()
     vim.opt_local.conceallevel = 2
     vim.opt_local.wrap = true
@@ -33,21 +33,23 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'FileType' }, {
 })
 
 --INFO: resession:
-local resession = require 'resession'
--- Automatically save sessions on by working directory on exit
--- vim.api.nvim_create_autocmd('VimLeavePre', {
---   callback = function()
---     resession.save(vim.fn.getcwd(), { notify = true })
---   end,
--- })
-vim.api.nvim_create_autocmd('VimLeavePre', {
-  callback = function()
-    resession.save 'last'
-  end,
-})
+local ok, resession = pcall(require, 'resession')
+if ok then
+  -- Automatically save sessions on by working directory on exit
+  -- vim.api.nvim_create_autocmd('VimLeavePre', {
+  --   callback = function()
+  --     resession.save(vim.fn.getcwd(), { notify = true })
+  --   end,
+  -- })
+  vim.api.nvim_create_autocmd('VimLeavePre', {
+    callback = function()
+      resession.save 'last'
+    end,
+  })
+end
 
 --highlights
-if not vim.g.transparent() then
+if vim.g.transparent ~= true and vim.g.transparent ~= 1 then
   vim.api.nvim_create_autocmd('ColorScheme', {
     pattern = '*',
     callback = function()
