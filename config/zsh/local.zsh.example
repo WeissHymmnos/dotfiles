@@ -1,0 +1,6 @@
+# Host-specific non-secret Zsh overrides live outside the dotfiles repo.
+# Copy any machine-only settings to:
+#   ~/.config/local/zsh/local.zsh
+#
+# Example:
+# export EDITOR="nvim"
